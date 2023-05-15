@@ -262,40 +262,64 @@ p {
     }
 }
 
-.question
-{
+.question {
     display: list-item;
     margin-bottom: 35px;
     position: relative;
+
     &::before {
         counter-increment: question;
-        content:  counter(question)":";
+        content: counter(question)":";
         font-family: bold;
-        color:$orange;
-        left:0px;
+        color: $orange;
+        left: 0px;
         position: absolute;
     }
-    h6
-    {
+
+    h6 {
         font-size: 17px;
         font-family: sbold;
         margin: 0 0 20px;
         padding-left: 30px;
     }
-    .optionsFlex
-    {
+
+    .optionsFlex {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        strong
-        {
+
+        strong {
             padding-right: 10px;
             letter-spacing: 2px;
         }
-        span
-        {
+
+        span {
             display: block;
             min-width: 25%;
+        }
+    }
+}
+
+.solution {
+    counter-reset: answers;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    span {
+        flex-basis: auto;
+        position: relative;
+        letter-spacing: 2px;
+        font-family: medium;
+        min-width: 80px;
+        margin-bottom: 10px;
+        &::before {
+            counter-increment: answers;
+            content: counter(answers)":";
+            font-family: bold;
+            color: $orange;
+            left: 0px;
+            position: relative;
+            margin-right: 5px;
         }
     }
 }
