@@ -1,0 +1,63 @@
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none !important;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+a,
+button,
+.btn {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: regular;
+    counter-reset: question;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-family: bold;
+}
+
+.text-regular {
+    font-family: regular;
+}
+
+.text-medium {
+    font-family: medium;
+}
+
+.text-sbold {
+    font-family: sbold;
+}
+
+.text-bold {
+    font-family: bold;
+}
+
+.text-bolder {
+    font-family: bolder;
+}
