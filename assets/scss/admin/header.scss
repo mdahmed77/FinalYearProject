@@ -1,0 +1,165 @@
+.alpha {
+  display: flex;
+
+  .sideBar {
+    // background-color: aliceblue;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .ultron {
+    max-width: calc(100% - 280px);
+    width: 100%;
+  }
+}
+
+.ultron {
+  min-height: 100vh;
+
+  .topBar {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: #fff;
+    box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+    .nav-pills {
+      display: inline-flex;
+      align-items: center;
+
+      a {
+        color: #485d78;
+        font-size: 15px;
+        font-family: bold;
+        padding: 8px 20px;
+        border-radius: 5px !important;
+
+        &.active {
+          background-color: $yellow;
+          color: #1d1d1d !important;
+          border-radius: 7px;
+        }
+      }
+    }
+
+    .user {
+      .avatar {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .panel {
+    height: calc(100% - 65px);
+    padding: 15px;
+    background-color: #f1f1f1;
+  }
+}
+
+.sideBar {
+  min-height: 100vh;
+  background-color: #1d1d1d;
+  background-color: $teal;
+  box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  .brand {
+    display: block;
+    padding: 15px 20px;
+    background-color: #ffeedf;
+
+    img {
+      max-height: 36px;
+      width: auto;
+    }
+  }
+
+  .menu {
+    background-color: #fff;
+    height: calc(100% - 66px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      width: 100%;
+
+      &.hasDrop {
+        >a::after {
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 400;
+          content: "\f107";
+          position: absolute;
+          right: 5px;
+          color: #1d1d1d;
+        }
+      }
+
+      &:hover {
+        >a {
+          color: $yellow;
+
+          i {
+            color: $yellow;
+          }
+        }
+      }
+
+      &.active {
+        >a {
+          font-family: bold;
+          color: $yellow;
+
+          i {
+            color: $yellow;
+          }
+        }
+      }
+
+      a {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 5px;
+        color: #1d1d1d;
+        font-family: medium;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+        position: relative;
+
+        i {
+          margin-right: 10px;
+          font-size: 18px;
+          min-width: 30px;
+          text-align: center;
+        }
+      }
+
+      .drop {
+        display: none;
+      }
+    }
+  }
+}
+
+.pane {
+  padding: 20px;
+}
+
+h1 {
+  font-family: bold;
+  color: #1d1d1d;
+  font-size: 28px;
+}

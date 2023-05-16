@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ERP</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/css/dtable.css" rel="stylesheet" />
+    <link id="styles" href="../assets/css/admin.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="alpha">
+      <div class="sideBar">
+        <a class="brand" href="dashboard.html">
+          <img src="../assets/images/logo.png" alt="" />
+        </a>
+        <div class="menu">
+          <div class="item active">
+            <a href="quizzes.html"><i class="fad fa-th-large"></i> Quizzes</a>
+          </div>
+          <div class="item">
+            <a href="contacts.html"><i class="fad fa-users"></i> Contacts</a>
+          </div>
+          <div class="item">
+            <a href="settings.html"><i class="fad fa-cog"></i> Settings</a>
+          </div>
+        </div>
+      </div>
+      <div class="ultron">
+        <div class="topBar">
+          <div class="user ms-auto">
+            <div class="avatar">
+              <img src="../assets/images/avatar.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fad fa-th-large"></i> Quizzes & Past Papers</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="dashboard.html">Items</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">View Items</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-3">
+                  <label for="">Subject Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-xl-3">
+                  <label for="">Year</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-xl-3">
+                  <label for="">Term</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-xl-3">
+                  <label for="">Type</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-default mt-3">Search</button>
+                </div>
+              </div>
+              <a href="addQuiz.html" class="btn btn-default float-end"><i class="far fa-plus"></i> Add Quiz</a>
+              <table
+                class="table table-bordered table-hover dataTable"
+                width="100%"
+              >
+                <thead>
+                  <tr>
+                    <th>Subject Name</th>
+                    <th>Type</th>
+                    <th>Term</th>
+                    <th>Year</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mathematics</td>
+                    <td>Quiz</td>
+                    <td>Mid Term</td>
+                    <td>2022</td>
+                    <td>
+                      <a href="addQuiz.html" class="btn btn-edit">
+                        <i class="far fa-edit"></i>
+                      </a>
+                      <a href="" class="btn btn-trash">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/dtable.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

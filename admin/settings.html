@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ERP</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/css/dtable.css" rel="stylesheet" />
+    <link id="styles" href="../assets/css/admin.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="alpha">
+      <div class="sideBar">
+        <a class="brand" href="dashboard.html">
+          <img src="../assets/images/logo.png" alt="" />
+        </a>
+        <div class="menu">
+          <div class="item">
+            <a href="quizzes.html"><i class="fad fa-th-large"></i> Quizzes</a>
+          </div>
+          <div class="item active">
+            <a href="contacts.html"><i class="fad fa-users"></i> Contacts</a>
+          </div>
+          <div class="item">
+            <a href="settings.html"><i class="fad fa-cog"></i> Settings</a>
+          </div>
+        </div>
+      </div>
+      <div class="ultron">
+        <div class="topBar">
+          <div class="user ms-auto">
+            <div class="avatar">
+              <img src="../assets/images/avatar.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="settings">
+            <div class="stLinks">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="pill" href="#profile"
+                    >My Profile <i class="far fa-angle-right"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="pill" href="#changePass"
+                    >Change Passowrd <i class="far fa-angle-right"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="profile">
+                <div class="card">
+                  <div class="card-body">
+                    <h4>My Account</h4>
+                    <div class="row">
+                      
+                      <div class="col-12">
+                        <button class="btn btn-default">
+                          <i class="far fa-save"></i> Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="changePass">
+                <div class="card">
+                  <div class="card-body">
+                    <h4>Categories</h4>
+                    <p>
+                      The categories here can be assigned to items for better
+                      organizing and grouping of products and materials.
+                    </p>
+                    <table class="table table-bordered table-hover iTable">
+                      <tr>
+                        <td><input type="text" value="Components [DEMO]" /></td>
+                        <td class="actions">
+                          <button class="btn btn-trash">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="row">
+                      <div class="col-12">
+                        <button class="btn btn-default insertRow">
+                          <i class="far fa-plus"></i> Add Row
+                        </button>
+                        <button class="btn btn-default">
+                          <i class="far fa-save"></i> Save
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/admin.js"></script>
+    <script>
+      $(document).ready(function () {
+        
+      });
+    </script>
+  </body>
+</html>

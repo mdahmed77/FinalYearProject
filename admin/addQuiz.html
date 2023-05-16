@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ERP</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="../assets/css/dtable.css" rel="stylesheet" />
+    <link id="styles" href="../assets/css/admin.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="alpha">
+      <div class="sideBar">
+        <a class="brand" href="dashboard.html">
+          <img src="../assets/images/logo.png" alt="" />
+        </a>
+        <div class="menu">
+          <div class="item">
+            <a href="quizzes.html"><i class="fad fa-th-large"></i> Quizzes</a>
+          </div>
+          <div class="item active">
+            <a href="contacts.html"><i class="fad fa-users"></i> Contacts</a>
+          </div>
+          <div class="item">
+            <a href="settings.html"><i class="fad fa-cog"></i> Settings</a>
+          </div>
+        </div>
+      </div>
+      <div class="ultron">
+        <div class="topBar">
+          <div class="user ms-auto">
+            <div class="avatar">
+              <img src="../assets/images/avatar.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fad fa-th-large"></i> Add Quiz</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="quizzes.html">Quizzes</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Add Quiz
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-3">
+                  <div class="field-group">
+                    <div class="field">
+                      <input type="text" />
+                    </div>
+                    <label for="">First Name</label>
+                  </div>
+                </div>
+                <div class="col-xl-3">
+                  <div class="field-group">
+                    <div class="field">
+                      <input type="text" />
+                    </div>
+                    <label for="">Last Name</label>
+                  </div>
+                </div>
+                <div class="col-xl-3">
+                  <div class="field-group">
+                    <div class="field">
+                      <input type="text" />
+                    </div>
+                    <label for="">Company Name</label>
+                  </div>
+                </div>
+                <div class="col-xl-3">
+                  <div class="field-group">
+                    <div class="field">
+                      <input type="text" />
+                    </div>
+                    <label for="">Display Name</label>
+                  </div>
+                </div>
+                <div class="col-xl-3">
+                  <div class="field-group">
+                    <div class="field">
+                      <i class="fal fa-envelope"></i>
+                      <input type="text" />
+                    </div>
+                    <label for="">Email</label>
+                  </div>
+                </div>
+                <div class="col-xl-3">
+                  <div class="field-group">
+                    <div class="field">
+                      <i class="fal fa-phone fa-rotate-90"></i>
+                      <input type="text" />
+                    </div>
+                    <label for="">Phone</label>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="field-group">
+                    <div class="field">
+                      <i class="fal fa-comment"></i>
+                      <input type="text" />
+                    </div>
+                    <label for="">Comment</label>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="field-group">
+                    <div class="field">
+                      <i class="fal fa-map-marker-alt"></i>
+                      <input type="text" />
+                    </div>
+                    <label for="">Shipping Address</label>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="field-group">
+                    <div class="field">
+                      <i class="fal fa-map-marker-alt"></i>
+                      <input type="text" />
+                    </div>
+                    <label for="">Billing Address</label>
+                  </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <button class="btn btn-default"><i class="far fa-save"></i> Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/dtable.js"></script>
+    <script src="../assets/js/admin.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".field.required input").blur(function () {
+          if (!$(this).val()) {
+              $(this).parents().removeClass("filled");
+            $(this).parents().addClass("empty");
+          } else {
+            $(this).parents().removeClass("empty");
+            $(this).parents().addClass("filled");
+          }
+        });
+        $(".field.required input").focus(function () {
+          $(this).parent().addClass("focused");
+        });
+        $(".field.required input").blur(function () {
+          $(this).parent().removeClass("focused");
+        });
+      });
+    </script>
+  </body>
+</html>
