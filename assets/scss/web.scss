@@ -10,12 +10,22 @@
         img {
             max-height: 38px;
             width: auto;
+
+            @media(max-width:767px) {
+                max-height: 21px;
+            }
         }
     }
 
     .navs {
         ul {
+            display: flex;
+            align-items: center;
+
             li {
+
+                position: relative;
+
                 a {
                     color: $dark;
                     font-family: bold;
@@ -24,8 +34,49 @@
                     display: inline-flex;
                     align-items: center;
 
+                    @media(max-width:767px) {
+                        font-size: 13px;
+                        padding: 18px 9px;
+                        font-family: medium;
+                    }
+
                     &:hover {
                         color: $orange;
+                    }
+                }
+
+                .dropMenu {
+                    position: absolute;
+                    top: calc(100% + 15px);
+                    left: 0px;
+                    background-color: #ffff;
+                    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 200px;
+                    min-width: 150px;
+                    border-top: 1px solid $orange;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .17s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                    a {
+                        padding: 7px 15px;
+                        white-space: nowrap;
+                        font-family: regular;
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover {
+                    >a {
+                        color: $orange;
+                    }
+
+                    .dropMenu {
+                        visibility: visible;
+                        opacity: 1;
+                        top: calc(100%);
                     }
                 }
             }
@@ -266,6 +317,9 @@ p {
     display: list-item;
     margin-bottom: 35px;
     position: relative;
+    @media (max-width:991px) {
+        margin-bottom: 20px;
+    }
 
     &::before {
         counter-increment: question;
@@ -287,15 +341,21 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        @media (max-width:991px) {
+            flex-wrap: wrap;
+        }
         strong {
             padding-right: 10px;
             letter-spacing: 2px;
         }
-
+        
         span {
             display: block;
             min-width: 25%;
+            @media (max-width:991px) {
+                min-width: 50%;
+                margin-bottom: 12px;
+            }
         }
     }
 }
@@ -324,4 +384,10 @@ p {
             margin-right: 5px;
         }
     }
+}
+
+.paper-holder {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px 0;
 }
