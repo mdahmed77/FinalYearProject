@@ -28,7 +28,9 @@
             <a href="quizzes.html"><i class="fad fa-th-large"></i> Quizzes</a>
           </div>
           <div class="item">
-            <a href="past-papers.html"><i class="fad fa-file-invoice"></i> Past Papers</a>
+            <a href="past-papers.html"
+              ><i class="fad fa-file-invoice"></i> Past Papers</a
+            >
           </div>
           <div class="item active">
             <a href="contacts.html"><i class="fad fa-users"></i> Contacts</a>
@@ -52,14 +54,14 @@
         <div class="panel">
           <div class="card">
             <div class="card-header">
-              <h3><i class="fad fa-th-large"></i> Add Quiz</h3>
+              <h3><i class="fad fa-file-invoice"></i> Add Paper</h3>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
-                    <a href="quizzes.html">Quizzes</a>
+                    <a href="quizzes.html">Past Papers</a>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
-                    Add Quiz
+                    Add Paper
                   </li>
                 </ol>
               </nav>
@@ -104,101 +106,28 @@
                   </div>
                 </div>
               </div>
-              <div class="quizQuestion">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="field-group">
-                      <div class="field required">
-                        <input type="text" />
-                      </div>
-                      <label for="">Question *</label>
+              <div class="col-xl-3 col-lg-4 col-12">
+                <div class="form-group">
+                  <label for="">Add Image</label>
+                  <div class="imgForm">
+                    <input type="file" class="iuploader d-none" />
+                    <div class="iviewer">
+                      <img src="" alt="" />
                     </div>
-                  </div>
-                  <div class="col-xl-3">
-                    <div class="field-group">
-                      <div class="field required">
-                        <input type="text" />
-                      </div>
-                      <label for="">Option A *</label>
-                    </div>
-                  </div>
-                  <div class="col-xl-3">
-                    <div class="field-group">
-                      <div class="field required">
-                        <input type="text" />
-                      </div>
-                      <label for="">Option B *</label>
-                    </div>
-                  </div>
-                  <div class="col-xl-3">
-                    <div class="field-group">
-                      <div class="field required">
-                        <input type="text" />
-                      </div>
-                      <label for="">Option C *</label>
-                    </div>
-                  </div>
-                  <div class="col-xl-3">
-                    <div class="field-group">
-                      <div class="field required">
-                        <input type="text" />
-                      </div>
-                      <label for="">Option D *</label>
-                    </div>
+                    <i class="far fa-times d-none"></i>
                   </div>
                 </div>
               </div>
-              <div class="d-flex justif-content-between align-items-center last-child">
-                <button class="btn btn-default addQuestion mt-1"><i class="fas fa-plus"></i> Add Question</button>
-                <button class="btn btn-default mt-1 ms-auto"><i class="fas fa-save"></i> Save</button>
+              <div
+                class="d-flex justif-content-between align-items-center last-child"
+              >
+                <button class="btn btn-default addPaper mt-1">
+                  <i class="fas fa-plus"></i> Add More
+                </button>
+                <button class="btn btn-default mt-1 ms-auto">
+                  <i class="fas fa-save"></i> Save
+                </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="qTemp d-none">
-      <div class="quizQuestion">
-        <div class="row">
-          <div class="col-12">
-            <div class="field-group">
-              <div class="field required">
-                <input type="text" />
-              </div>
-              <label for="">Question *</label>
-            </div>
-          </div>
-          <div class="col-xl-3">
-            <div class="field-group">
-              <div class="field required">
-                <input type="text" />
-              </div>
-              <label for="">Option A *</label>
-            </div>
-          </div>
-          <div class="col-xl-3">
-            <div class="field-group">
-              <div class="field required">
-                <input type="text" />
-              </div>
-              <label for="">Option B *</label>
-            </div>
-          </div>
-          <div class="col-xl-3">
-            <div class="field-group">
-              <div class="field required">
-                <input type="text" />
-              </div>
-              <label for="">Option C *</label>
-            </div>
-          </div>
-          <div class="col-xl-3">
-            <div class="field-group">
-              <div class="field required">
-                <input type="text" />
-              </div>
-              <label for="">Option D *</label>
             </div>
           </div>
         </div>
@@ -209,5 +138,31 @@
     <script src="../assets/js/bootstrap.js"></script>
     <script src="../assets/js/dtable.js"></script>
     <script src="../assets/js/admin.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".imgForm .iviewer").on("click", function () {
+          $(".imgForm .iuploader").click();
+        });
+        $(".imgForm .iuploader").change(function (e) {
+          var fileName = e.target.files[0].name;
+          $(".imgForm .fa-times").removeClass("d-none");
+          if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              $(".iviewer img")
+                .attr("src", e.target.result)
+                .css("opacity", "1");
+            };
+            reader.readAsDataURL(this.files[0]);
+          }
+          // $('.iviewer').css('border', 'none');
+        });
+        $(".imgForm .fa-times").on("click", function () {
+          $(".imgForm .fa-times").addClass("d-none");
+          $(".iviewer img").attr("src", "").css("opacity", "0");
+          // $('.iviewer').css('border', '2px dashed');
+        });
+      });
+    </script>
   </body>
 </html>

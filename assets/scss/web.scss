@@ -19,9 +19,10 @@
                 a {
                     color: $dark;
                     font-family: bold;
-                    font-size: 18px;
+                    font-size: 15px;
                     padding: 20px 15px;
                     display: inline-flex;
+                    align-items: center;
 
                     &:hover {
                         color: $orange;
@@ -304,6 +305,7 @@ p {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+
     span {
         flex-basis: auto;
         position: relative;
@@ -311,6 +313,7 @@ p {
         font-family: medium;
         min-width: 80px;
         margin-bottom: 10px;
+
         &::before {
             counter-increment: answers;
             content: counter(answers)":";

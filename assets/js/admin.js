@@ -1,20 +1,10 @@
 $(document).ready(function () {
-  $(".field.required input").blur(function () {
-    if (!$(this).val()) {
-        $(this).parents().removeClass("filled");
-      $(this).parents().addClass("empty");
-    } else {
-      $(this).parents().removeClass("empty");
-      $(this).parents().addClass("filled");
-    }
+  var qTemplate = $('.qTemp').html();
+  $('.addQuestion').on('click', function () {
+    $('.card-body .last-child').before(qTemplate);
+    fieldItem();
   });
-  $(".field.required input").focus(function () {
-    $(this).parent().addClass("focused");
-  });
-  $(".field.required input").blur(function () {
-    $(this).parent().removeClass("focused");
-  });
-
+  fieldItem();
   $(".linked").click(function () {
     var linkedURL = $(this).attr("data-href");
     window.location.href = linkedURL;
@@ -34,7 +24,25 @@ $(document).ready(function () {
     searching: false
   });
   $('a[data-bs-toggle="pill"], a[data-bs-toggle="tab"]').on("shown.bs.tab", function (e) {
-      $($.fn.dataTable.tables(true)).DataTable().columns.adjust().responsive.recalc();
-    }
+    $($.fn.dataTable.tables(true)).DataTable().columns.adjust().responsive.recalc();
+  }
   );
 });
+
+function fieldItem() {
+  $(".field.required input").blur(function () {
+    if (!$(this).val()) {
+      $(this).parent().removeClass("filled");
+      $(this).parent().addClass("empty");
+    } else {
+      $(this).parent().removeClass("empty");
+      $(this).parent().addClass("filled");
+    }
+  });
+  $(".field.required input").focus(function () {
+    $(this).parent().addClass("focused");
+  });
+  $(".field.required input").blur(function () {
+    $(this).parent().removeClass("focused");
+  });
+}

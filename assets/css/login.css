@@ -1,0 +1,316 @@
+@font-face {
+  font-family: regular;
+  src: url(fonts/Jost-Regular.ttf);
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: medium;
+  src: url(fonts/Jost-Medium.ttf);
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: sbold;
+  src: url(fonts/Jost-SemiBold.ttf);
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: bold;
+  src: url(fonts/Jost-Bold.ttf);
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: bolder;
+  src: url(fonts/Jost-Black.ttf);
+  font-display: swap;
+  font-weight: 900;
+}
+html {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*::before, *::after {
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+body {
+  font-family: "regular";
+  background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style-type: none;
+}
+
+.btn,
+a {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none !important;
+}
+.btn:focus,
+a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-family: "bold";
+  margin: 0px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.btn-theme {
+  border-radius: 7px;
+  font-size: 16px;
+  font-family: bold;
+  background-color: #ff7700;
+  padding: 10px 15px;
+  min-width: 150px;
+  border: none;
+  color: #000;
+}
+@media (max-width: 991px) {
+  .btn-theme {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+}
+.btn-theme:hover {
+  background-color: #008fe2;
+  color: #000;
+}
+
+.login-brand {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+.login-brand img {
+  max-height: 40px;
+  width: auto;
+}
+@media (max-width: 991px) {
+  .login-brand {
+    padding: 10px 30px;
+    line-height: 41px;
+  }
+}
+
+.sign {
+  padding: 0px 15px;
+  position: relative;
+  z-index: 10;
+  background-image: url(../images/loginBg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.sign.webLogin {
+  background-image: url(../images/webLogin.jpg);
+}
+.sign.webRegister {
+  background-image: url(../images/webRegister.jpg);
+}
+@media (max-width: 991px) {
+  .sign {
+    padding: 0 15px;
+  }
+}
+.sign .brand {
+  padding: 15px 0;
+  color: #000;
+}
+.sign .form-wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sign .form-wrapper h1 {
+  font-family: bold;
+  font-size: 25px;
+  margin: 0px 0px 10px;
+  color: #82959f;
+  text-align: center;
+  font-family: "regular";
+  text-transform: uppercase;
+}
+.sign .form-wrapper p {
+  text-align: center;
+  color: #767676;
+}
+.sign .form-wrapper p.heading-p {
+  font-size: 13px;
+}
+.sign .form-wrapper p a {
+  font-family: bold;
+  color: #000;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+.sign .form-wrapper p a:hover {
+  color: #ff7700;
+}
+.sign form {
+  width: 100%;
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 991px) {
+  .sign form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.sign form .form-check-input:checked {
+  background-color: #ff7700;
+  border-color: #ff7700;
+}
+.sign .fields {
+  width: 50%;
+  width: 100%;
+  padding: 35px;
+}
+@media (max-width: 991px) {
+  .sign .fields {
+    padding: 30px;
+  }
+}
+.sign .fields .form-group {
+  margin: 0px 0px 10px;
+  position: relative;
+}
+.sign .fields .form-group .form-control {
+  border: none;
+  font-size: 14px;
+  margin: 0;
+  min-height: 45px;
+  background: transparent;
+  font-family: medium;
+  color: #000;
+  background-color: #e3e8ed;
+  border-radius: 50px;
+  padding: 5px 20px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.sign .fields .form-group .form-control::-webkit-input-placeholder {
+  color: #000;
+}
+.sign .fields .form-group .form-control::-moz-placeholder {
+  color: #000;
+}
+.sign .fields .form-group .form-control:-ms-input-placeholder {
+  color: #000;
+}
+.sign .fields .form-group .form-control::-ms-input-placeholder {
+  color: #000;
+}
+.sign .fields .form-group .form-control::placeholder {
+  color: #000;
+}
+.sign .fields .form-check-inline span {
+  font-family: bold;
+  font-size: 13px;
+  color: #000;
+  cursor: pointer;
+}
+.sign .fields .link {
+  font-size: 13px;
+  font-family: bold;
+  color: #ff7700;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+.sign .fields .link:hover {
+  text-decoration: underline !important;
+}
+.sign .fields .btn-theme {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 14px;
+  font-family: bold;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #1d1d1d;
+}
+.sign .fields .btn-theme:hover {
+  background-color: #ff7700;
+}
+
+.rizeBrand img {
+  height: 30px;
+  width: auto;
+}

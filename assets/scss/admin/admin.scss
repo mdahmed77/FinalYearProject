@@ -7,7 +7,7 @@
 .btn-default {
   background-color: #000 !important;
   color: #fff !important;
-  font-size: 13px;
+  font-size: 14px;
   font-family: regular;
   min-width: 100px;
 
@@ -116,7 +116,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
 
 table.table-bordered.dataTable th {
   font-family: bold;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -133,7 +133,7 @@ div.dataTables_wrapper div.dataTables_filter label {
 
 .paginate_button.previous .page-link,
 .paginate_button.next .page-link {
-  font-size: 12px;
+  font-size: 14px;
   font-family: "bold";
   background: transparent !important;
 }
@@ -159,14 +159,14 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 .page-item.active .page-link {
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
   background-color: $yellow;
   border-color: $yellow;
 }
 
 .form-select-sm {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 5px;
 }
 
@@ -193,7 +193,7 @@ div.dataTables_wrapper div.dataTables_info {
   top: 5px;
 
   li.breadcrumb-item {
-    font-size: 12px;
+    font-size: 14px;
     font-family: "regular";
 
     &::before {
@@ -268,7 +268,7 @@ div.dataTables_wrapper div.dataTables_info {
     padding: 10px 15px 15px;
 
     label {
-      font-size: 12px;
+      font-size: 14px;
       font-family: bold;
       margin: 0 0 5px;
     }
@@ -295,7 +295,7 @@ div.dataTables_wrapper div.dataTables_info {
       }
 
       a {
-        font-size: 13px;
+        font-size: 14px;
         font-family: regular;
         padding: 8px 20px;
         border-radius: 5px !important;
@@ -317,7 +317,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 .dropdown-toggle {
-  font-size: 12px;
+  font-size: 14px;
   background: #f1f1f1;
   float: right;
   position: relative;
@@ -325,12 +325,12 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 .dropdown-header {
-  font-size: 12px;
+  font-size: 14px;
   color: #006c8a;
 }
 
 .dropdown-item {
-  font-size: 13px;
+  font-size: 14px;
 
   i {
     font-size: 16px;
@@ -360,6 +360,20 @@ div.dataTables_wrapper div.dataTables_info {
   --bs-table-accent-bg: #009dff14;
 }
 
+.quizQuestion {
+  border: 1px dashed #aaa;
+  border-radius: 7px;
+  padding: 5px 15px;
+  background: #fff0db;
+  margin-bottom: 10px;
+
+  .field-group .field input,
+  .field-group .field select {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
 .field-group {
   margin: 5px 0 10px;
   display: flex;
@@ -368,6 +382,8 @@ div.dataTables_wrapper div.dataTables_info {
   label {
     font-family: regular !important;
     color: #81888e;
+    font-size: 14px !important;
+    font-family: medium !important;
   }
 
   .field {
@@ -444,7 +460,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 h6 {
-  font-size: 12px;
+  font-size: 14px;
   color: #81888e;
 }
 
@@ -502,7 +518,7 @@ h6 {
     label {
       font-family: regular;
       color: #787878;
-      font-size: 12px;
+      font-size: 14px;
       margin: 0 0 10px;
     }
 
@@ -524,7 +540,7 @@ h6 {
 
       span {
         font-family: bold;
-        font-size: 12px;
+        font-size: 14px;
         display: inline-block;
         padding: 3px 10px 3px 7px;
       }
@@ -584,7 +600,7 @@ h6 {
 }
 
 .tagify__tag>div>* {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
 }
 
@@ -609,20 +625,20 @@ h6 {
   height: 100%;
 
   .stLinks {
-    background-color: #e5e9ec;
+    background-color: #e9ecee;
     width: 250px;
     box-shadow: 0px 1px 3px rgb(0 0 0 / 30%);
 
     .nav-pills {
       .nav-link {
         border-radius: 0px;
-        color: #7287a5;
+        color: #4f545b;
         display: flex;
         align-items: center;
         justify-content: space-between;
         border: none;
-        font-size: 13px;
-        font-family: bold;
+        font-size: 14px;
+        font-family: medium;
         padding: 12px 15px;
 
         &.active {
@@ -693,7 +709,7 @@ h6 {
 
           input[type=text] {
             padding: 3px 12px;
-            font-size: 13px;
+            font-size: 14px;
             position: absolute;
             top: 0;
             left: 0;
@@ -716,6 +732,203 @@ h6 {
     .card {
       border-radius: 0px;
       height: 100%;
+    }
+  }
+}
+
+
+.dashboard-card {
+  background: linear-gradient(180deg, #30465e, #1d2c3c);
+  color: #fff;
+  padding: 15px 22px;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 107px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.dashboard-card .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  .hello-text {
+    padding: 15px 20px;
+  }
+
+  img {
+    max-height: 92px;
+    width: auto;
+  }
+
+  h5 {
+    font-family: regular;
+    font-size: 24px;
+    margin: 0 0 0px;
+  }
+
+  h4 {
+    font-family: bold;
+    font-size: 28px;
+    margin: 0;
+  }
+}
+
+.aqua-bg {
+  background: linear-gradient(180deg, #00bcd4, #0281bd);
+}
+
+.ocean-bg {
+  background: linear-gradient(180deg, #5c6bc0, #1a237e);
+}
+
+.orange-bg {
+  background: linear-gradient(180deg, #fba200, #d86f15);
+}
+
+.leaf-bg {
+  background: linear-gradient(180deg, #00925f, #00543d);
+}
+
+.blood-bg {
+  background: linear-gradient(180deg, #cf000f, #8f000d);
+}
+
+.dashboard-card:hover {
+  color: #fff;
+}
+
+.dashboard-card i {
+  font-size: 36px;
+  display: block;
+}
+
+.dashboard-card span {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  display: block;
+}
+
+.dashboard-card .amount {
+  font-size: 36px;
+  font-family: "sbold";
+}
+
+.imgForm {
+  position: relative;
+  margin-bottom: 10px;
+  .iviewer {
+    background: #ffeedf;
+    padding-top: 120%;
+    height: auto;
+    width: 100%;
+    border: 1px dashed $yellow;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.1s linear;
+
+    img {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      height: calc(100% + 4px);
+      width: calc(100% + 4px);
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    &::after {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 100;
+      content: "\f03e";
+      top: 0px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      font-size: 50px;
+      position: absolute;
+      color: $yellow;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      transition: 0.1s linear;
+    }
+  }
+
+  .fa-times {
+    position: absolute;
+    z-index: 12;
+    height: 22px;
+    width: 70px;
+    background: #fff;
+    text-align: center;
+    padding: 5px 0;
+    color: red;
+    border-radius: 3px;
+    right: 5px;
+    top: 5px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &::after {
+      content: "Remove";
+      font-family: u;
+      font-size: 12px;
+      margin-left: 5px;
+      position: relative;
+      top: 0px;
+    }
+  }
+
+  &.profile-picture {
+    text-align: center;
+
+    .iviewer {
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto 10px;
+      height: 180px;
+      width: 180px;
+
+      &::after {
+        content: "\f093";
+      }
+    }
+
+    .fa-times {
+      position: relative;
+      height: auto;
+      width: 68px;
+      background: red;
+      color: #fff;
+      padding: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

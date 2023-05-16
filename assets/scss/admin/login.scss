@@ -1,0 +1,212 @@
+@import "var.scss";
+@import "../fonts.scss";
+@import "reset.scss";
+
+select,
+input,
+button {
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.btn-theme {
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: bold;
+    background-color: $yellow;
+    padding: 10px 15px;
+    min-width: 150px;
+    border: none;
+    color: #000;
+
+    @media (max-width: 991px) {
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 4px;
+    }
+
+    &:hover {
+        background-color: #008fe2;
+        color: #000;
+    }
+}
+
+.login-brand {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 20px;
+
+    img {
+        max-height: 40px;
+        width: auto;
+    }
+
+    @media (max-width: 991px) {
+        padding: 10px 30px;
+        line-height: 41px;
+    }
+}
+
+.sign {
+    padding: 0px 15px;
+    position: relative;
+    z-index: 10;
+    background-image: url(../images/loginBg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &.webLogin
+    {
+        background-image: url(../images/webLogin.jpg);
+    }
+    &.webRegister
+    {
+        background-image: url(../images/webRegister.jpg);
+    }
+
+    @media (max-width: 991px) {
+        padding: 0 15px;
+    }
+
+    .brand {
+        padding: 15px 0;
+        color: #000;
+    }
+
+    .form-wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-family: bold;
+            font-size: 25px;
+            margin: 0px 0px 10px;
+            color: #82959f;
+            text-align: center;
+            font-family: 'regular';
+            text-transform: uppercase;
+        }
+
+        p {
+            text-align: center;
+            color: #767676;
+
+            &.heading-p {
+                font-size: 13px;
+            }
+
+            a {
+                font-family: bold;
+                color: #000;
+                transition: 0.1s ease;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        max-width: 450px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0px 3px 5px 0 rgb(0 0 0 / 10%);
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+
+        .form-check-input:checked {
+            background-color: $yellow;
+            border-color:  $yellow;
+        }
+    }
+
+    .fields {
+        width: 50%;
+        width: 100%;
+        padding: 35px;
+
+        @media (max-width: 991px) {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin: 0px 0px 10px;
+            position: relative;
+
+            .form-control {
+                border: none;
+                font-size: 14px;
+                margin: 0;
+                min-height: 45px;
+                background: transparent;
+                font-family: medium;
+                color: #000;
+                background-color: #e3e8ed;
+                border-radius: 50px;
+                padding: 5px 20px;
+                backdrop-filter: blur(5px);
+
+                &::placeholder {
+                    color: #000;
+                }
+            }
+        }
+
+        .form-check-inline {
+            span {
+                font-family: bold;
+                font-size: 13px;
+                color: #000;
+                cursor: pointer;
+            }
+        }
+
+        .link {
+            font-size: 13px;
+            font-family: bold;
+            color: $yellow;
+            transition: 0.1s ease;
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+
+        .btn-theme {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            font-size: 14px;
+            font-family: bold;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            color: #fff;
+            background-color: #1d1d1d;
+
+            &:hover {
+                background-color: $yellow;
+            }
+        }
+    }
+}
+
+.rizeBrand {
+    img {
+        height: 30px;
+        width: auto;
+    }
+}
