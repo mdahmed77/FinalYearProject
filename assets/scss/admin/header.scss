@@ -1,8 +1,7 @@
 .alpha {
   display: flex;
-
+  align-items: flex-start;
   .sideBar {
-    // background-color: aliceblue;
     width: 100%;
     max-width: 280px;
   }
@@ -24,7 +23,9 @@
     padding: 0 15px;
     background-color: #fff;
     box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
-    position: relative;
+    position: sticky;
+    top:0px;
+    z-index: 100;
 
     .nav-pills {
       display: inline-flex;
@@ -73,8 +74,10 @@
   background-color: #1d1d1d;
   background-color: $teal;
   box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.3);
-  position: relative;
-
+  position: sticky;
+  top: 0px;
+  display: inline-flex;
+  flex-direction: column;
   .brand {
     display: block;
     padding: 15px 20px;
@@ -92,7 +95,7 @@
     padding: 15px;
     display: flex;
     flex-direction: column;
-
+    flex-grow: 1;
     .item {
       width: 100%;
 

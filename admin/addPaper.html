@@ -27,13 +27,10 @@
           <div class="item">
             <a href="quizzes.html"><i class="fad fa-th-large"></i> Quizzes</a>
           </div>
-          <div class="item">
+          <div class="item active">
             <a href="past-papers.html"
               ><i class="fad fa-file-invoice"></i> Past Papers</a
             >
-          </div>
-          <div class="item active">
-            <a href="contacts.html"><i class="fad fa-users"></i> Contacts</a>
           </div>
           <div class="item">
             <a href="settings.html"><i class="fad fa-cog"></i> Settings</a>
@@ -106,15 +103,17 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-lg-4 col-12">
-                <div class="form-group">
-                  <label for="">Add Image</label>
-                  <div class="imgForm">
-                    <input type="file" class="iuploader d-none" />
-                    <div class="iviewer">
-                      <img src="" alt="" />
+              <div class="row paperRow">
+                <div class="col-xl-3 col-lg-4 col-12">
+                  <div class="form-group">
+                    <label for="">Add Image</label>
+                    <div class="imgForm">
+                      <input type="file" class="iuploader d-none" />
+                      <div class="iviewer">
+                        <img src="" alt="" />
+                      </div>
+                      <i class="far fa-times d-none"></i>
                     </div>
-                    <i class="far fa-times d-none"></i>
                   </div>
                 </div>
               </div>
@@ -134,34 +133,70 @@
       </div>
     </div>
 
+    <div class="paperTemp d-none">
+      <div class="col-xl-3 col-lg-4 col-12">
+        <div class="form-group">
+          <label for="">Add Image</label>
+          <div class="imgForm">
+            <input type="file" class="iuploader d-none" />
+            <div class="iviewer">
+              <img src="" alt="" />
+            </div>
+            <i class="far fa-times d-none"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.js"></script>
     <script src="../assets/js/dtable.js"></script>
     <script src="../assets/js/admin.js"></script>
     <script>
       $(document).ready(function () {
-        $(".imgForm .iviewer").on("click", function () {
-          $(".imgForm .iuploader").click();
+        var paperTemp = $(".paperTemp").html();
+        $(".addPaper").on("click", function () {
+          $(".paperRow").append(paperTemp);
+          paperUploader();
         });
-        $(".imgForm .iuploader").change(function (e) {
-          var fileName = e.target.files[0].name;
-          $(".imgForm .fa-times").removeClass("d-none");
-          if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-              $(".iviewer img")
-                .attr("src", e.target.result)
-                .css("opacity", "1");
-            };
-            reader.readAsDataURL(this.files[0]);
-          }
-          // $('.iviewer').css('border', 'none');
-        });
-        $(".imgForm .fa-times").on("click", function () {
-          $(".imgForm .fa-times").addClass("d-none");
-          $(".iviewer img").attr("src", "").css("opacity", "0");
-          // $('.iviewer').css('border', '2px dashed');
-        });
+        function paperUploader() {
+          $(".imgForm .iviewer").each(function () {
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $(this).prev().click();
+              });
+          });
+          $(".imgForm .iuploader").each(function () {
+            $(this)
+              .off("change")
+              .change(function (e) {
+                var fileName = e.target.files[0].name,
+                  this_ = $(this);
+                $(this).siblings("i").removeClass("d-none");
+                if (this.files && this.files[0]) {
+                  var reader = new FileReader();
+                  reader.onload = function (e) {
+                    $(this_)
+                      .next()
+                      .find("img")
+                      .attr("src", e.target.result)
+                      .css("opacity", "1");
+                  };
+                  reader.readAsDataURL(this.files[0]);
+                }
+              });
+          });
+          $(".imgForm .fa-times").each(function () {
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $(this).addClass("d-none");
+                $(this).prev().find("img").attr("src", "").css("opacity", "0");
+              });
+          });
+        }
+        paperUploader();
       });
     </script>
   </body>

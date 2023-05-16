@@ -28,10 +28,6 @@
   font-display: swap;
   font-weight: 900;
 }
-html {
-  overflow-x: hidden;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -46,7 +42,6 @@ body {
   background-color: #fff;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
 }
 
 ul {
